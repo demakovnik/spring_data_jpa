@@ -12,6 +12,8 @@ public interface EmployeeService {
 
     public List<Employee> getAllEmployees();
 
+    public List<Employee> getAllByName(String name);
+
     public void saveEmployee(Employee employee);
 
     public Employee getEmployeeById(int id);

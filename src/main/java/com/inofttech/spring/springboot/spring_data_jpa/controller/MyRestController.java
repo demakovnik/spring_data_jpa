@@ -22,6 +22,12 @@ public class MyRestController {
         return allEmployees;
     }
 
+    @GetMapping("/employees/name/{name}")
+    public List<Employee> showAllEmployeesByName(@PathVariable String name) {
+        List<Employee> allEmployeesByName = employeeService.getAllByName(name);
+        return allEmployeesByName;
+    }
+
     @GetMapping("/employees/{id}")
     public Employee getEmployee(@PathVariable int id) {
         Employee employee = employeeService.getEmployeeById(id);
